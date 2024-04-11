@@ -1,0 +1,7 @@
+face_alignment
+mediapipe
+basicsr
+lws
+librosa
+moviepy
+pydub
