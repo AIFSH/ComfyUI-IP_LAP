@@ -24,14 +24,8 @@ pip install -r requirements.txt
 download [weights](https://www.jianguoyun.com/p/DeXpK34QgZ-EChjI9YcFIAA) or [OneDrive](https://1drv.ms/f/s!Amqu9u09qiUGi7UJIADzCCC9rThkpQ?e=P1jG5N) and put the `*.pth` files in `ComfyUI-IP_LAP/weights`
 
 ## Tutorial
-[Demo](https://www.bilibili.com/video/BV1ht421J7SX)
-<div>
-  <figure>
-    <video src="https://www.bilibili.com/video/BV1ht421J7SX/?share_source=copy_web&vd_source=453c36b4abef37acd389d4c01b149023" controls autoplay width="600px">
-    【川普diss shit帝？| ComfyUI数字人 IP_LAP算法节点开源啦！】 
-    </video>
-  </figure>
-</div>
+- [Demo](https://www.bilibili.com/video/BV1ht421J7SX)
+- [FULL WorkFLOW](https://www.bilibili.com/video/BV1XE421T7ja)
 
 ## WeChat Group && Donate
 <div>
