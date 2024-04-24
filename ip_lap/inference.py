@@ -132,12 +132,12 @@ class IP_LAP_infer:
             fps = video_stream.get(cv2.CAP_PROP_FPS)
             if fps != 25:
                 print(" input video fps:", fps,',converting to 25fps...')
-                tmp_file = '{}/temp_25fps.mp4'.format(temp_dir)
+                tmp_file = os.path.join(temp_dir,'temp_25fps.mp4')
                 if os.path.exists(tmp_file): os.remove(tmp_file)
                 print(tmp_file)
                 command = 'ffmpeg -y -i ' + video_file + f' -r 25 {tmp_file}'
                 subprocess.call(command, shell=platform.system() != 'Windows',stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-                video_file = '{}/temp_25fps.mp4'.format(temp_dir)
+                video_file = tmp_file
                 video_stream.release()
                 video_stream = cv2.VideoCapture(video_file)
                 fps = video_stream.get(cv2.CAP_PROP_FPS)
@@ -157,9 +157,10 @@ class IP_LAP_infer:
         ##(2) Extracting audio####
         print(f'[Step 2]Extracting audio ... from {audio_file}', NAME)
         if not audio_file.endswith('.wav'):
-            command = 'ffmpeg -y -i {} -strict -2 {}'.format(audio_file, '{}/temp.wav'.format(temp_dir))
+            tmp_file = os.join.path(temp_dir,'temp.wav')
+            command = 'ffmpeg -y -i {} -strict -2 {}'.format(audio_file, tmp_file)
             subprocess.call(command, shell=platform.system() != 'Windows', stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-            audio_file = '{}/temp.wav'.format(temp_dir)
+            audio_file = tmp_file
         wav = audio.load_wav(audio_file, 16000)
         mel = audio.melspectrogram(wav)  # (H,W)   extract mel-spectrum
         ##read audio mel into list###
