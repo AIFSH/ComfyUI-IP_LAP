@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-ip_lap"
+description = "Nodes:IP_LAP Node, Video Loader, PreView Video, Combine Audio Video. the comfyui custom node of [a/IP_LAP](https://github.com/Weizhi-Zhong/IP_LAP) to make audio driven videos!"
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["face_alignment", "mediapipe", "basicsr", "lws", "librosa", "moviepy", "pydub"]
+
+[project.urls]
+Repository = "https://github.com/AIFSH/ComfyUI-IP_LAP"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-IP_LAP"
+Icon = ""
